@@ -1,0 +1,102 @@
+{% extends 'navvv.html' %}
+{% load static %}
+{%block content%}
+		<div class="subbox">
+		</div>
+		<form method='post' action="/records/" class="boxngsub">
+			{%csrf_token%}
+		<div id="nakalabass" >
+				<br><h1>Types of digital art</h1>
+			
+					
+				<label for="dropdown">Types of Digital Art</label>
+					<select name="types" class="textbakss"  required>
+						<option value ="" selected>None</option>
+						<option value ="Fractal/Algorithmic Art"  >Fractal/Algorithmic Art</option>
+						<option value ="Computer Gaphics" >Computer Gaphics</option>
+						<option value ="Data Moshing" >Data Moshing</option>
+						<option value ="Digital Collage" >Digital Collage</option>
+						<option value ="Digital Painting" >Digital Painting</option>
+						<option value ="Dynamic Painting" >Dynamic Painting</option>
+						<option value ="Pixel Art" >Pixel Art</option>
+						<option value ="Raster Painting" >Raster Painting</option>
+						<option value ="Manual Vector Drawing" >Manual Vector Drawing </option>
+						<option value ="Digital Photography" >Digital Photography</option>
+					</select><br>
+
+					<label for="dropdown">Resolution</label>
+					<select name="resolu" class="textbakss" value="" required>
+						<option value ="None" selected>None</option>
+						<option value ="1280x960(4:3)" >1280x960(4:3)</option>
+						<option value ="1440x1080(4:3)" >1440x1080(4:3)</option>
+						<option value ="1600x1200(4:3)" >1600x1200(4:3)</option>
+						<option value ="1920x1440(4:3)" >1920x1440(4:3)</option>
+						<option value ="1280x800(16:10)" >1280x800(16:10)</option>
+						<option value ="1400x900(16:10)" >D1400x900(16:10)</option>
+						<option value ="1680x1050(16:10)" >1680x1050(16:10)</option>
+						<option value ="1920x1200(16:10)" >1920x1200(16:10)</option>
+						<option value ="1280x720(16:9)" >1280x720(16:9) </option>
+						<option value ="1366x768(16:9)" >1366x768(16:9)</option>
+						<option value ="1600x900(16:9)" >1600x900(16:9)</option>
+						<option value ="1920x1080(16:9)" >1920x1080(16:9)</option>
+					</select><br>
+
+					<label for="dropdown">Orientation</label>
+					<select name="orientat" class="textbakss" value="" required>
+						<option value ="" selected>None</option>
+						<option value ="Portrait" >Portrait</option>
+						<option value ="Landscape" >Landscape</option>
+					</select><br>
+
+					<label for="brand">Name of the Art</label>
+					<input type="text" name="Nart" class="textbakss" value="" placeholder = "Type here your title of the art" required=""><br>
+					<label for="price">Price</label>
+					<input type="number" name="price" class="textbakss" value="" placeholder = "Type your price" required=""><br>
+
+					<label for="currency">Currency</label>
+					<select name="currency" class="textbakss"  required>
+						<option value ="" selected>None</option>
+						<option value ="US dollar (USD)" >US dollar (USD)</option>
+						<option value ="Euro (EUR)" >Euro (EUR)</option>
+						<option value ="Japanese Yen (JPY)" >Japanese Yen (JPY)</option>
+						<option value ="Australian dollar (AUD)" >Australian dollar (AUD)</option>
+						<option value ="Canadian dollar (CAD) " >Canadian dollar (CAD) </option>
+						<option value ="New Zealand dollar (NZD) " >New Zealand dollar (NZD) </option>
+						<option value ="Philippine peso (PHP) " >Philippine peso (PHP) </option>
+						
+					</select><br>
+
+					<h1>Device Used Information</h1>
+			</div>
+				<label for="main">Main Device used</label>
+					<select name="main" class="textbakss"  required>
+						<option value ="" selected>None</option>
+						<option value ="Desktop Computer" >Desktop Computer</option>
+						<option value ="Laptop" >Laptop</option>
+						<option value ="Smart Phone" >Smart Phone</option>
+						<option value ="Ipad" >Ipad</option>
+						<option value ="Android Tablet" >Android Tablet</option>
+					</select><br>
+
+					<label for="second">Secondary Device used</label>
+					<select name="second" class="textbakss" value="" required>
+						<option value ="None" selected>None</option>
+						<option value ="Pen Tablet" >Pen Tablet</option>
+						<option value ="Pen Stylus" >Pen Stylus</option>
+						<option value ="Drawing Tablet(Touch Screen)" >Drawing Tablet(Touch Screen)</option>
+					</select><br>
+
+					<label for="brand">Brand name of the secondary device</label>
+					<input type="text" name="brand" class="textbakss" value="" placeholder = "Type N/A if unknown" required=""><br>
+					<label for="model">Model no.</label>
+					<input type="text" name="model" class="textbakss" value="" placeholder = "Type N/A if unknown" required=""><br>
+				
+		<br><input type="submit" name="send" value="SEND" class="sendbtns" />
+
+		</form>
+			</div>
+			<div id="back" style="display: none; position: absolute; top: 43%; left:50%; background-color: white;" >
+				<input type="button" class="sendbtns" value="Back to the Artists" onclick="location.href='dartgalartists.html'">
+			</div>	
+
+{% endblock %}

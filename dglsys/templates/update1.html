@@ -1,0 +1,19 @@
+{% extends 'navvv.html' %}
+{% load static %}
+{%block content%}
+<h1>Records Update</h1>
+<form method="POST" action="">
+{% csrf_token%}
+
+    <div> Types of Digital Art {{form.tda}}  </div>
+    <div> Resolution {{form.reso}} </div>
+    <div> Orientation {{form.orient}} </div>
+    <div> Name of the Art {{form.nameart}} </div>
+    <div> Price {{form.prays}} </div>
+    <div> Currency {{form.curr}} </div>
+    <div>
+    <input type='submit' class= 'btn primary' ></input>
+    </div>
+</form>
+
+{%endblock %}

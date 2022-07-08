@@ -1,0 +1,19 @@
+{% extends 'navvv.html' %}
+{% load static %}
+{%block content%}
+<h1>Records Update</h1>
+<form method="POST" action="">
+{% csrf_token%}
+
+    <div> Name {{form.fnam}}  </div>
+    <div> Email{{form.emayl}} </div>
+    <div> Sex {{form.seks}} </div>
+    <div> Country {{form.countri}} </div>
+    <div> Description {{form.descr}} </div>
+    <div>
+    <input type='submit' class= 'btn primary' ></input>
+    </div>
+
+</form>
+
+{%endblock %}

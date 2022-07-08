@@ -1,0 +1,50 @@
+body{
+background-color:#36405A; 
+padding-left: 8%;
+padding-right: 8%;
+box-sizing: border-box;
+user-select: none;
+}
+
+.logo{
+font-size:20px;
+color:#fffcf2;
+font-family: 'Noto Sans', sans-serif;
+user-select: none;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+li {
+  float: left;
+}
+
+li a {
+  color:black;
+  font-family: 'Noto Sans', sans-serif;
+  display: block;
+  padding: 8px;
+   background-color: floralwhite;
+
+}
+
+h1{
+  color:floralwhite;
+}
+
+label{
+  color:floralwhite;
+}
+th{
+  color: floralwhite;
+}
+td{
+  color: floralwhite;
+}
+

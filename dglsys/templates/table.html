@@ -1,0 +1,76 @@
+{% extends 'navvv.html' %}
+{% load static %}
+{%block content%}
+
+    <div class="subbox">
+    </div>
+
+    <div id="nakalabass" >
+      <div class="subbox4">
+        <!-- <h1 class="subbox1">Table</h1> -->
+      </div>
+        <table border="5" bordercolor="" align="center" class="boxngsub2">
+            <tr>
+              <th colspan="10">Information</th>
+          </tr>
+               
+                <tr>
+
+                    <td>Name:</td>
+                    <td>Email:</td>
+                    <td>Sex:</td>
+                    <td>Country:</td>
+                    <td>Description:</td>
+                    <td>Status:</td>
+                </tr>
+                <tr>
+                {%for info in Submisyon%}
+                    <td>{{info.fnam}}</td>
+                    <td>{{info.emayl}}</td>
+                    <td>{{info.seks}}</td>
+                    <td>{{info.countri}}</td>
+                    <td>{{info.descr}}</td>
+                    <td>
+                      <a type='button' href="{% url 'dglsys:update' info.pk%}" > Update </a>    <a class="btn btn-sm" type='button' href="{% url 'dglsys:delete' info.pk %}" > Delete </a>
+                    </td>
+                </tr>
+                {%endfor%}
+         </table><br> 
+
+          <table border="5" bordercolor="" align="center" class="boxngsub2">
+            <tr>
+              <th colspan="10">Types of Digital Art</th>
+          </tr>
+              
+                <tr>
+
+                    <td>Types of Digital Art:</td>
+                    <td>Resolution:</td>
+                    <td>Orientation:</td>
+                    <td>Name of the Art:</td>
+                    <td>Price:</td>
+                    <td>Currency:</td>
+                    <td>Status:</td>
+                    
+                </tr>
+                <tr>
+                {%for info in Digitaltype%}
+                    <td> {{info.tda}}</td>
+                    <td> {{info.reso}}</td>
+                    <td> {{info.orient}}</td>
+                    <td> {{info.nameart}}</td>
+                    <td> {{info.prays}}</td>
+                    <td> {{info.curr}}</td>
+                    <td>
+                      <a type='button' href="{% url 'dglsys:update1' info.pk%}" > Update </a>    <a class="btn btn-sm" type='button' href="{% url 'dglsys:delete1' info.pk %}" > Delete </a>
+
+                    </td>
+                </tr>
+                {%endfor%}
+         </table><br> 
+        
+
+      </fo>
+    </div>
+  
+{%endblock%}

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}"> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Submission of entry</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+	<body>
+		<div class="logo">
+			<p>D Art Gal - Submission of entry</p> <br><br>
+		</div>
+
+		<ul>
+		  <li><a href="{% url "dglsys:MainPage" %}">Personal Information</a></li>
+		  <li><a href="{% url "dglsys:Information" %}">Information Form</a></li>
+		  <li><a href="{% url "dglsys:records" %}">Table</a></li>
+		  
+		  
+		</ul>
+		
+		{%block content%}
+		{% endblock %}
+	</body>
+</html>
